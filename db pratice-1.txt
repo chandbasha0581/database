@@ -1,0 +1,19 @@
+create database Users;
+use Users;
+create table Users (UserID int, Username varchar(50), Email varchar(100));
+alter table Users add column address varchar(100); # add column address varchar(100) for the table
+alter table Users add column phno int; # add column phno int for the table
+describe Users;
+create table Orders (OrderID int, CustomerName varchar(100), OrderDate date, TotalAmount decimal(10,2));
+alter table Orders modify column OrderDate Year;  # Modify OrderDate datatype (date)  to OrderDate datatype to (year) for the table
+alter table Orders modify column OrderID bigint; # Modify OrderID datatype (Int) to OrderID datatype to (bigint) for the table
+show databases;
+create table Products (ProductID int, ProductName varchar(100), Price decimal(10,2), StockQuantity int);
+alter table Products drop column Price; # Drop the column Price from the table 
+create table Employees (EmployeeID int, Name varchar(100), position varchar(100), HireDate date ); 
+alter table Employees add column salary int after Name; # add column salary after the Name for the table
+alter table Employees add column Address varchar(100); # add column address varchar(100) for the table
+create table Reviews (ReviewID int, ProductionName varchar(100), Rating int, ReviewText text );
+alter table Reviews add column reviewer_name varchar(50); # add column reviewer_name varchar(50) for the table
+alter table Reviews add column review_data varchar(50); # add column review_data varchar(50) for the table
+alter table Reviews drop column ReviewText; # drop column ReviewText from the table

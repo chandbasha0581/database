@@ -1,0 +1,99 @@
+create database VVR;     	#creating the database
+use VVR;		    # using the database 
+create table ABC (id int, name varchar(100), age int, salary bigint);        #creating the table 
+
+# inserting the values to the table in a general form
+
+insert into ABC values (1, "chand", 24, 20000);
+insert into ABC values (2, "vishnu", 21, 21000);
+insert into ABCvalues (3, "bharat", 20, 19000);
+insert into ABC values (4, "shasha", 23, 23000);
+insert into ABC values (5, "tarun", 22, 22000);
+insert into ABC values (6, "vasid", 24, 23000);
+insert into ABC values (7, "manoj", 22, 20000);
+insert into ABC values (8, "suhail", 25, 21000);
+insert into ABC values (9, "meghana", 22, 21000);
+insert into ABC values (10, "vidya", 23, 21000);
+insert into ABC values (11, "prakash", 20, 21000);
+insert into ABC values (12, "siva", 25, 21000);
+insert into ABC values (13, "charitha", 24, 21000);
+insert into ABC values (14, "srilakha", 21, 21000);
+insert into ABC values (15, "pavithra", 23, 21000);
+alter table ABC add column email varchar(100) first;
+alter table ABC add column gender varchar(100);
+
+describe ABC; 	#Describes the table
+
+# This is the effective form to assign, the values to column_name through the specific column_name
+
+update ABC set gender=case
+when id=1 then "male"
+when id=2 then "male"
+when id=3 then "male"
+when id=4 then "male"
+when id=5 then "male"
+when id=6 then "male"
+when id=7 then "male"
+when id=8 then "male"
+when id=9 then "female"
+when id=10 then "female"
+when id=11 then "male"
+when id=12 then "male"
+when id=13 then "female"
+when id=14 then "female"
+when id=15 then "female"
+end;
+
+
+update ABC set email=case
+when id=1 then "cha@gmail.com"
+when id=2 then "vis@gmail.com"
+when id=3 then "bha@gmail.com"
+when id=4 then "sha@gmail.com"
+when id=5 then "tar@gmail.com"
+when id=6 then "vas@gmail.com"
+when id=7 then "man@gmail.com"
+when id=8 then "suh@gmail.com"
+when id=9 then "megh@gmail.com"
+when id=10 then "vid@gmail.com"
+when id=11 then "pra@gmail.com"
+when id=12 then "siva@gmail.com"
+when id=13 then "chari@gmail.com"
+when id=14 then "srila@gmail.com"
+when id=15 then "pavi@gmail.com"
+end;
+
+/* This is a general form to assign, the values to column_name
+
+insert into ABC(email, gender) values("cha@gamil.com" , "male");
+ insert into ABC(email, gender) values("vis@gmail.com" , "male");
+ insert into ABC(email, gender) values("bha@gmail.com" , "male");
+ insert into ABC(email, gender) values("sha@gmail.com" , "male") ; 
+insert into ABC(email, gender) values("tar@gmail.com" , "male"); 
+insert into ABC(email, gender) values("vas@gmail.com" , "male");
+insert into ABC(email, gender) values("man@gmail.com" , "male");
+insert into ABC(email, gender) values("suh@gmail.com" , "male"); 
+insert into ABC(email, gender) values("megh@gmail.com" , "female");
+insert into ABC(email, gender) values("vid@gmail.com" , "female"); 
+insert into ABC(email, gender) values("pra@gmail.com" , "male") ;
+insert into ABC(email, gender) values("siva@gmail.com" , "male") ; 
+insert into ABC(email, gender) values("chari@gmail.com" , "female") ;
+insert into ABC(email, gender) values("sri@gmail.com" , "female") ;
+insert into ABC(email, gender) values("pavi@gmail.com" , "female");
+
+*/
+
+alter table ABC drop column age;         # it is used to drop / detele the column
+alter table ABC modify column name varchar(67);   # it is used to modify the element of  column  datatype
+alter table ABC rename column id to s_roll_no;       # it is use for rename the column_name
+
+#it is use to update the multiple no of values in a column_name 
+
+UPDATE ABC set email=case
+when s_roll_no=3 then "hi bro@gmail.com"
+when s_roll_no=4 then "hi bro@gmail.com"
+else email							# here else is use to store the rest of previous values
+end;
+
+select * from ABC;          # to display the elements in the table
+

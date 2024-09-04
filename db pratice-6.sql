@@ -55,6 +55,8 @@ end;
 select * from name_bar;
 
 
+#  db pratice-6 is the below one: 
+
 create table movies (movie_no int, movie_name varchar(25), date_of_relase date );
 insert into movies values (1,"kalla" ,"2015-02-13"), (2,"july", "2016-09-10"), (3,"fidaa","2017-06-20"), (4,"magadeera","2010-05-01"), (5,"ragada","2014-11-02"),
 (6,"kalki","2024-05-22"),(7,"raja the great","2019-06-25"), (8,"happydays","2008-08-18"), (9,"bahubali","2014-06-29"), (10, "temper","2013-07-26");
@@ -78,5 +80,5 @@ select movie_no,movie_name from movies where movie_name ="kalki";
 select *from movies where movie_name in ("raja the great", "happydays", "ragada","july");
 select * from movies where movie_no = 4 and movie_name = "magadeera";
 Select * from movies where movie_name ="fidaa" and amount_of_ticket=200;
-select * from movies where movie_name like "k%"; #displaying the words arter "k"
-select * from movies where movie_name like "%i";  # displaying the words before "i"
+select * from movies where movie_name like "k%";                  #displaying the words arter "k"
+select * from movies where movie_name like "%i";                  # displaying the words before "i"
